@@ -1,0 +1,19 @@
+{
+    "name": "ruddyoke/string",
+    "description": "Provide an object-oriented vision based on string functions php.",
+    "license": "GPLv3 <http://www.gnu.org/licenses/quick-guide-gplv3.html>",
+    "authors": [
+        {
+            "name": "ruddyoke",
+            "email": "lruddy33@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Roke\\": "src/",
+            "Roke\\Tests\\": "tests/"
+        }
+    }
+}
