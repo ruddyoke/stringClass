@@ -2,15 +2,18 @@
 
 namespace Roke;
 
+use Roke\Builder;
+
 /**
 * 
 */
-class String
+class String extends Builder
 {
 	protected $string;
 	function __construct($string)
 	{
 		$this->string = nl2br($string);
+		parent::__construct($this->string);
 	}
 
 	function __toString()
@@ -67,6 +70,11 @@ class String
 	function reverse()
 	{
 		return strrev($this->string);
+	}
+
+	function trim($character_mask = " \t\n\r\0\x0B")
+	{
+		return trim($this->string, $character_mask);
 	}
 
 
