@@ -50,7 +50,7 @@ class Countable
 		$string = strip_tags($this->string);
 
 		//Stokera les information à retouner.
-		$arr_temp;
+		$arr_temp = [];
 
 		$arr1 = count_chars($string, 1);
 

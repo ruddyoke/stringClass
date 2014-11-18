@@ -1,6 +1,6 @@
 <?php
 
-namespace Roke\Test\Unit
+namespace Roke\Test\Unit;
 
 class StringTest extends PHPUnit_Framework_TestCase
 {
