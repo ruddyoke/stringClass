@@ -14,11 +14,6 @@ class TransformString
 		$this->string =$string;
 	}
 
-	function ucFirst()
-	{
-		return ucfirst($this->string);
-	}
-
 	function toUpperCase()
 	{
 		return strtoupper($this->string);
@@ -29,7 +24,15 @@ class TransformString
 		return strtolower($this->string);
 	}
 
+	function ucfirst()
+	{
+		return ucfirst($this->string);
+	}
 
+	function ucwords()
+	{
+		return ucwords($this->string);
+	}
 }
 
 
