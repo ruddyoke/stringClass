@@ -9,6 +9,8 @@ class Countable
 {
 	private $string;
 	private $undesirable_ascii_code;
+	/* A list of additional characters which will be considered as 'word' */
+	private $charlist;
 	
 	function __construct($string)
 	{
@@ -18,6 +20,8 @@ class Countable
 			'Carriage Return' => 13, 
 			'c_195' 		  => 195,
 		);
+		
+		$this->charlist = "àéè1234567890";
 	}
 
 	private function getChar($ascii_code)
@@ -77,7 +81,7 @@ class Countable
 	*/
 	function words()
 	{
-		return str_word_count($this->string);
+		return str_word_count($this->string, 0, $this->charlist);
 	}
 
 	/**
