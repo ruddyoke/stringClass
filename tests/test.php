@@ -18,6 +18,7 @@ echo $a->bold(),'<br/>';
 echo $a->concat($b),'<br/>';
 echo $a->italics(),'<br/>';
 
+echo "indexOf <br/>";
 echo "index of é = ",$a->indexOf('é'),'<br/>';
 echo $a->lastIndexOf('tz'),'<br/>';
 echo $a->length(),'<br/>';
@@ -25,6 +26,10 @@ var_dump ($a->split(' '));
 
 echo $c->trim('&'),'<br/>';
 var_dump( $a->count->chars() );
+echo "Countable::words.<br/>";
+var_dump( $a->count->words() );
+var_dump( $a->getWords() );
+var_dump( $a->getWordsIndex() );
 
 echo 'ucfirst == ', $a->transform->ucfirst(),'<br/>';
 echo 'ucwords == ', $a->transform->ucwords(),'<br/>';

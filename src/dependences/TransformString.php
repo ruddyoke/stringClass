@@ -24,11 +24,17 @@ class TransformString
 		return strtolower($this->string);
 	}
 
+	/**
+	*  Make a string's first character uppercase
+	*/
 	function ucfirst()
 	{
 		return ucfirst($this->string);
 	}
 
+	/**
+	* Uppercase the first character of each word in a string
+	*/
 	function ucwords()
 	{
 		return ucwords($this->string);

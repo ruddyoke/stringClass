@@ -23,7 +23,7 @@ class String extends Builder
 
 	function bold()
 	{
-		return "<b>{$this->string}</b>";
+		return '<b>'. $this->string . '</b>';
 	}
 
 	function charAt($position)
@@ -42,9 +42,40 @@ class String extends Builder
 		return $this->string . $string;
 	}
 
+	function HTMLencode()
+	{
+		return htmlentities($this->string);
+	}
+
+	function HTMLdecode()
+	{
+		return HTMLdecode($string);
+	}
+
+	/**
+	*  @return array
+	*/
+	function getWords()
+	{
+		return str_word_count($this->string, 1, $this->charlist);
+	}
+
+	/**
+	*  @return array
+	*/
+	function getWordsIndex()
+	{
+		$temp_arr = array();
+		$temp = str_word_count($this->string, 2, $this->charlist);
+		foreach ($temp as $key => $value) {
+			$temp_arr[$value] = $key;
+		}
+		return $temp_arr;
+	}
+
 	function italics()
 	{
-		return "<i>{$this->string}</i>";
+		return '<i>'. $this->string . '</i>';
 	}
 
 	function indexOf($needle, $offset = 0)
