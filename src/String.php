@@ -108,7 +108,10 @@ class String extends Builder
 		return trim($this->string, $character_mask);
 	}
 
-
+	function toUtf8($from_encoding="ISO-8859-1")
+	{
+		return mb_convert_encoding($this->string, "UTF-8",$from_encoding);
+	}
 
 
 }
