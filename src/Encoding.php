@@ -32,4 +32,19 @@ class Encoding {
 		}
 		return $temp;
 	}
+
+	static function windowEncodingToUtf16($string, $from_encoding="ISO-8859-1")
+	{
+		return mb_convert_encoding($string, "UTF-16",$from_encoding);
+	}
+
+	static function utf16ToWindowEncoding($string, $to_encoding="ISO-8859-1")
+	{
+		return mb_convert_encoding($string, $to_encoding, 'UTF-16');
+	}
+
+	static function utf16ToUtf8($string, $to_encoding="UTF-8")
+	{
+		return mb_convert_encoding($string , $to_encoding , 'UTF-16');
+	}
 }
